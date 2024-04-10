@@ -1,0 +1,40 @@
+
+#Botones { 
+  height: 30%;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+#hide{
+  display: none;
+}
+.hide{
+  display: none;
+}
+
+.Formularios{
+  margin-top: 10px;
+  padding-top: 20px;
+  height: 100%;
+  width: 90%;
+}
+
+#Formulario_Imgreso{
+  margin-left: 20px;
+  height: 100%;
+  width: 100%;
+}
+
+.seccion-oscura{
+  background-color: black;
+  margin-top: 20px;
+}
+
+.Formulario_busqueda{
+  display: flex;
+  justify-content: center;
+}
+

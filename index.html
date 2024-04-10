@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aiep Clinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stiles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img height="80" width="100" src="/sources/articles-180962_imagen_portada.thumb_iNormal.jpg">
+          AIEP Clinic
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div id="Botones">
+
+      <button id="nuevo" type="button" class="btn btn-primary btn-lg">Ingresar Ficha Médica</button>
+
+      <button id="buscar" type="button" class="btn btn-secondary btn-lg">Buscar Ficha</button>
+
+    </div>
+
+    <section class="Formularios">
+      <div id="Formulario_Imgreso" class="hide">
+        <form id="form1">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Rut</label>
+            <input type="email" class="form-control" id="rut" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="nombres">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="direccion">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="ciudad">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+            <input type="number" class="form-control" id="telefono">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Fecha de Nacimiento</label>
+            <input type="date" class="form-control" id="fecha_n">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Estado Civil</label>
+            <input type="text" class="form-control" id="estado_c">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Comentarios</label>
+            <input type="text" class="form-control" id="comentarios">
+          </div>
+          <button onclick="guardarFicha()"  class="btn btn-primary">Guardar</button>
+          <button onclick="limpiarCampos()"  class="btn btn-primary">Limpiar</button>
+          <button onclick="cerrarFormulario()"  class="btn btn-primary">cerrar</button>
+        </form>
+
+      </div>
+      
+      <div  class="hide Formulario_busqueda">
+        <form id="busqueda22" class="d-flex">
+          <input id="buscarApellido" class="form-control me-2" placeholder="Primer Apellido" aria-label="Apellido">
+          <button id="searchB" class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+  
+      </div>
+
+    </section>
+    
+  </main>
+
+  <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center"> 
+      
+    <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+      <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z"/>
+        </svg>
+        
+      <a href="https://web.facebook.com/?locale=es_LA&_rdc=1&_rdr" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+        </svg>
+        
+      </a>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
+      
+    </div>
+    <div class="derechos-de-autor">JJAA(2023) &#169;</div>
+  </footer>
+
+  <script src="/index.js"></script>
+  
+</body>
+</html>
